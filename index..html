@@ -5,27 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Web Frontend</title>
-    <!-- Menghubungkan file CSS eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- ====== NAVIGASI ====== -->
-    <!-- Navbar dengan posisi fixed agar tetap terlihat saat scroll -->
+    <!-- Navbar dengan logo di kiri dan menu di kanan -->
     <nav class="navbar">
         <!-- Logo brand -->
         <div class="logo">MyPorto.</div>
-
-        <!-- Tombol Hamburger untuk mobile - muncul di layar kecil -->
-        <div class="hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
         <!-- Daftar menu navigasi -->
-        <ul class="nav-links" id="nav-links">
+        <ul class="nav-links">
             <li><a href="#beranda">Beranda</a></li>
             <li><a href="#tentang">Tentang</a></li>
             <li><a href="#proyek">Proyek</a></li>
@@ -33,26 +24,27 @@
     </nav>
 
     <!-- ====== HERO / BERANDA ====== -->
-    <!-- Section hero sebagai halaman utama dengan tinggi minimal 100vh -->
+    <!-- Section hero sebagai halaman utama -->
     <header id="beranda" class="hero">
         <!-- Konten teks di sisi kiri -->
         <div class="hero-content">
             <h1>Halo, Saya Frontend Web Dev!</h1>
             <p>Membangun antarmuka website yang interaktif, modern, dan responsif.</p>
-            <!-- Tombol CTA untuk scroll ke section proyek -->
+            <!-- Tombol CTA untuk scroll ke proyek -->
             <a href="#proyek" class="btn">Lihat Karya Saya</a>
         </div>
         <!-- Gambar profil di sisi kanan -->
         <div class="hero-image">
             <img src="https://imgs.search.brave.com/PsLYy0tCITlfZI264hb9MSKWO_ULrX3rAhitDzFOrVg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2RiL2E5/LzliL2RiYTk5Yjhl/OTExODY2Y2ZmMGFj/NjQ0M2NlYWU2ZGRl/LmpwZw"
-                class="box-gambar" alt="Foto Profil" />
+                class="box-gambar" />
         </div>
     </header>
 
     <!-- ====== SECTION PROYEK ====== -->
-    <!-- Menampilkan daftar project terbaru dalam bentuk grid card -->
+    <!-- Menampilkan daftar project terbaru -->
     <section id="proyek" class="proyek-section">
         <h2>Project Terbaru</h2>
+        <!-- Grid untuk card project -->
         <div class="grid-karya">
             <!-- Card project 1 -->
             <div class="card">
@@ -73,7 +65,7 @@
     </section>
 
     <!-- ====== SECTION KEAHLIAN ====== -->
-    <!-- Menampilkan badge keahlian dalam bentuk inline-flex -->
+    <!-- Menampilkan badge keahlian -->
     <section id="skills" class="skills-section">
         <h2>Keahlian Saya</h2>
         <div class="skills-container">
@@ -87,7 +79,7 @@
     </section>
 
     <!-- ====== SECTION KONTAK ====== -->
-    <!-- Form kontak dengan layout grid 2 kolom -->
+    <!-- Form kontak dengan layout 2 kolom -->
     <section id="kontak" class="kontak-section">
         <h2>Hubungi Saya</h2>
         <div class="kontak-container">
@@ -110,36 +102,10 @@
     </section>
 
     <!-- ====== FOOTER ====== -->
+    <!-- Footer copyright -->
     <footer>
         <p>&copy; 2026 Web Frontend - Amikom Computer Club</p>
     </footer>
-
-    <!-- ====== JAVASCRIPT UNTUK HAMBURGER MENU ====== -->
-    <script>
-        /*
-         * Fungsi untuk mengontrol toggle hamburger menu
-         * Saat icon hamburger diklik, menu akan muncul/sembunyi
-         * dan icon akan berubah animasi menjadi X
-         */
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        // Event listener saat hamburger diklik
-        hamburger.addEventListener('click', () => {
-            // Toggle class 'active' pada hamburger untuk animasi
-            hamburger.classList.toggle('active');
-            // Toggle class 'active' pada nav-links untuk menampilkan/menyembunyikan menu
-            navLinks.classList.toggle('active');
-        });
-
-        // Menutup menu otomatis saat link diklik (untuk UX yang lebih baik)
-        document.querySelectorAll('.nav-links li a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
 
 </body>
 

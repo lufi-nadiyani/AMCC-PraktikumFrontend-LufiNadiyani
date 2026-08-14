@@ -2,604 +2,394 @@
    CSS RESET & BASE STYLES
    ======================================== */
 
-/* Reset semua margin, padding, dan mengatur box-sizing */
-/* box-sizing: border-box memastikan padding & border tidak menambah ukuran elemen */
+/* RESET: Menghapus semua style default browser */
 * {
     margin: 0;
+    /* Hilangkan margin default */
     padding: 0;
+    /* Hilangkan padding default */
     box-sizing: border-box;
-    /* Penting untuk layout yang konsisten */
+    /* Padding & border tidak nambah ukuran elemen */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Font utama */
     scroll-behavior: smooth;
-    /* Animasi scroll halus saat klik anchor link */
+    /* Animasi scroll halus */
 }
 
-/* Warna dasar body dan teks */
+/* STYLE BODY */
 body {
     background-color: #f8f9fa;
+    /* Warna latar abu-abu terang */
     color: #333;
+    /* Warna teks gelap */
 }
 
-/* Menghilangkan underline default pada link */
+/* STYLE LINK */
 a {
     text-decoration: none;
+    /* Hilangkan garis bawah */
     color: inherit;
+    /* Warna mengikuti warna teks */
 }
 
 /* ========================================
    BASE STYLING (Elemen Global)
    ======================================== */
 
-/* Logo dengan warna brand */
 .logo {
     font-size: 24px;
+    /* Ukuran font logo */
     font-weight: bold;
+    /* Tebal */
     color: #6c5ce7;
+    /* Warna ungu */
 }
 
-/* Tombol utama dengan warna brand dan efek hover */
 .btn {
     display: inline-block;
+    /* Agar bisa diberi padding */
     padding: 10px 20px;
+    /* Jarak dalam tombol */
     background-color: #6c5ce7;
+    /* Latar ungu */
     color: white;
+    /* Teks putih */
     border-radius: 5px;
+    /* Sudut melengkung */
     margin-top: 15px;
-    transition: background-color 0.3s ease;
-    /* Transisi halus untuk hover */
-    border: none;
-    cursor: pointer;
+    /* Jarak atas */
 }
 
 .btn:hover {
     background-color: #5b4bc4;
-    /* Warna lebih gelap saat hover */
+    /* Warna ungu lebih gelap saat hover */
 }
 
-/* Gambar profil berbentuk lingkaran dengan border */
 .box-gambar {
     width: 300px;
+    /* Lebar gambar */
     height: 300px;
+    /* Tinggi gambar */
     object-fit: cover;
-    /* Memastikan gambar proporsional di dalam container */
+    /* Gambar proporsional */
     border-radius: 50%;
-    /* Membuat gambar menjadi lingkaran sempurna */
+    /* Membuat lingkaran */
     display: flex;
+    /* Flexbox */
     align-items: center;
+    /* Tengah vertikal */
     justify-content: center;
+    /* Tengah horizontal */
     font-weight: bold;
+    /* Tebal */
     color: #b2bec3;
+    /* Warna abu-abu */
     border: 5px solid #6c5ce7;
+    /* Border ungu */
 }
 
-/* Card untuk menampilkan project */
 .card {
     background-color: white;
+    /* Latar putih */
     padding: 25px;
+    /* Jarak dalam */
     border-radius: 10px;
+    /* Sudut melengkung */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Efek bayangan halus */
+    /* Bayangan */
     border-top: 4px solid #6c5ce7;
-    /* Garis aksen di bagian atas card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animasi hover */
+    /* Garis ungu di atas */
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    /* Card naik sedikit saat hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    /* Bayangan lebih besar saat hover */
-}
-
-/* Heading section dengan ukuran 32px dan rata tengah */
 h2 {
     text-align: center;
+    /* Rata tengah */
     margin-bottom: 40px;
+    /* Jarak bawah */
     font-size: 32px;
+    /* Ukuran font */
 }
 
-/* Footer dengan latar gelap dan teks putih */
 footer {
     text-align: center;
+    /* Rata tengah */
     padding: 20px;
+    /* Jarak dalam */
     background-color: #2d3436;
+    /* Latar gelap */
     color: white;
+    /* Teks putih */
     margin-top: 50px;
+    /* Jarak atas */
 }
 
-/* Section keahlian dengan padding dan teks rata tengah */
 .skills-section {
     padding: 50px 10%;
+    /* Jarak dalam */
     text-align: center;
+    /* Rata tengah */
 }
 
-/* Badge keahlian dengan gaya tombol pill */
 .skill-badge {
     background-color: #6c5ce7;
+    /* Latar ungu */
     color: white;
+    /* Teks putih */
     padding: 10px 20px;
+    /* Jarak dalam */
     border-radius: 50px;
-    /* Membuat bentuk pill */
+    /* Bentuk pill */
     font-weight: bold;
+    /* Tebal */
     border: 2px solid transparent;
-    transition: 0.3s ease;
-    /* Transisi halus untuk hover */
+    /* Border transparan */
+    transition: 0.3s;
+    /* Animasi halus */
 }
 
 .skill-badge:hover {
     background-color: white;
+    /* Latar putih saat hover */
     color: #6c5ce7;
+    /* Teks ungu */
     border: 2px solid #6c5ce7;
+    /* Border ungu */
     cursor: pointer;
+    /* Tangan saat hover */
 }
 
-/* Section kontak dengan latar putih */
 .kontak-section {
     padding: 50px 10%;
+    /* Jarak dalam */
     background-color: white;
+    /* Latar putih */
 }
 
-/* Heading kontak dengan warna brand */
 .kontak-info h3 {
     margin-bottom: 15px;
+    /* Jarak bawah */
     color: #6c5ce7;
+    /* Warna ungu */
     font-size: 24px;
+    /* Ukuran font */
 }
 
-/* Paragraf di kontak info dengan line-height nyaman dibaca */
 .kontak-info p {
     line-height: 1.6;
+    /* Jarak antar baris */
 }
 
-/* Field input dan textarea dengan padding dan border */
 .input-field {
     width: 100%;
+    /* Lebar penuh */
     padding: 15px;
+    /* Jarak dalam */
     margin-bottom: 15px;
+    /* Jarak bawah */
     border: 1px solid #ccc;
+    /* Garis abu-abu */
     border-radius: 5px;
+    /* Sudut melengkung */
     font-size: 16px;
-    transition: border-color 0.3s ease;
-    /* Animasi saat focus */
+    /* Ukuran font */
 }
 
-.input-field:focus {
-    border-color: #6c5ce7;
-    /* Border berubah warna saat focus */
-    outline: none;
-    /* Menghilangkan outline default browser */
-}
-
-/* Section proyek dengan latar putih */
 .proyek-section {
     background-color: white;
+    /* Latar putih */
     min-height: 300px;
+    /* Tinggi minimal */
     padding: 50px 10%;
+    /* Jarak dalam */
 }
 
 /* ========================================
    LAYOUTING DENGAN FLEXBOX & GRID
    ======================================== */
 
-/* --- NAVBAR --- */
-/* Menggunakan flexbox untuk menata logo, hamburger, dan menu navigasi */
+/* ===== 1. LAYOUT NAVBAR ===== */
 .navbar {
+    position: fixed;
+    /* Navbar tetap di atas saat scroll */
+    top: 0;
+    /* Menempel di atas */
+    width: 100%;
+    /* Lebar penuh */
+    background-color: white;
+    /* Latar putih */
+    padding: 20px 50px;
+    /* Jarak dalam */
+    z-index: 999;
+    /* Di atas konten lain */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Bayangan */
+
     display: flex;
+    /* Flexbox */
     justify-content: space-between;
     /* Logo di kiri, menu di kanan */
     align-items: center;
-    /* Vertikal center */
-    padding: 20px 50px;
-
-    /* Navbar fixed di atas agar selalu terlihat */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Bayangan tipis */
-    z-index: 1000;
-    /* Memastikan navbar di atas konten lain */
+    /* Tengah vertikal */
 }
 
-/* Menu navigasi menggunakan flex untuk horizontal */
 .nav-links {
     display: flex;
-    list-style: none;
-    /* Menghilangkan bullet points */
+    /* Menu horizontal */
     gap: 30px;
     /* Jarak antar menu */
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    /* Hilangkan bullet */
 }
 
-/* Style untuk setiap item menu */
-.nav-links li a {
-    transition: color 0.3s ease;
-    font-weight: 500;
-    padding: 5px 0;
-    position: relative;
-}
-
-/* Efek underline saat hover */
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #6c5ce7;
-    transition: width 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #6c5ce7;
-    /* Warna brand saat hover */
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-    /* Underline muncul dari kiri ke kanan */
-}
-
-/* --- HAMBURGER MENU (Tombol 3 garis) --- */
-/* Secara default disembunyikan di desktop, muncul di mobile */
-.hamburger {
-    display: none;
-    /* Sembunyikan di desktop */
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
-    gap: 5px;
-}
-
-/* Setiap garis pada hamburger */
-.hamburger .bar {
-    width: 28px;
-    height: 3px;
-    background-color: #333;
-    border-radius: 3px;
-    transition: 0.3s ease;
-    /* Animasi saat berubah jadi X */
-}
-
-/* Animasi hamburger menjadi X saat aktif */
-/* Bar pertama berputar 45 derajat dan bergeser */
-.hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-/* Bar kedua menghilang (fade out) */
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-/* Bar ketiga berputar -45 derajat dan bergeser */
-.hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-/* --- HERO --- */
-/* Menggunakan flexbox untuk layout 2 kolom: teks di kiri, gambar di kanan */
+/* ===== 2. LAYOUT HERO SECTION ===== */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 150px 10% 100px 10%;
+    /* Jarak dalam (atas besar agar tidak tertutup navbar) */
     min-height: 100vh;
-    /* Tinggi minimal 100% viewport height */
-    padding: 80px 10% 15px;
-    /* Padding atas menyesuaikan navbar fixed */
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    /* Gradien halus */
+    /* Tinggi minimal 1 layar penuh */
+
+    display: flex;
+    /* Flexbox */
+    justify-content: space-between;
+    /* Teks di kiri, gambar di kanan */
+    align-items: center;
+    /* Tengah vertikal */
 }
 
-/* Konten teks mengambil 1 bagian dari flex */
 .hero-content {
     flex: 1;
+    /* Ambil sisa ruang */
     padding-right: 50px;
+    /* Jarak kanan */
 }
 
-/* Heading hero dengan ukuran besar */
 .hero-content h1 {
     font-size: 48px;
+    /* Ukuran font besar */
     margin-bottom: 20px;
-    color: #2d3436;
+    /* Jarak bawah */
 }
 
-/* Gambar mengambil 1 bagian dari flex, center */
 .hero-image {
     flex: 1;
+    /* Ambil sisa ruang */
     display: flex;
-    align-items: center;
+    /* Flexbox */
     justify-content: center;
+    /* Tengah horizontal */
 }
 
-/* --- GRID PROYEK --- */
-/* Menggunakan CSS Grid untuk layout card yang responsif */
+/* ===== 3. LAYOUT PROYEK (GRID) ===== */
+.proyek-section {
+    padding: 50px 10%;
+    /* Jarak dalam */
+}
+
 .grid-karya {
     display: grid;
-    /* auto-fit: menyesuaikan jumlah kolom, minmax: lebar minimum 250px */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* CSS Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 kolom sama besar */
     gap: 30px;
     /* Jarak antar card */
 }
 
-/* --- SKILLS CONTAINER --- */
-/* Menggunakan flexbox dengan wrap agar badge turun ke baris berikutnya */
+/* ===== 4. LAYOUT SKILLS (FLEX-WRAP) ===== */
 .skills-container {
     display: flex;
-    flex-wrap: wrap;
-    /* Membungkus elemen jika tidak muat */
+    /* Flexbox */
     justify-content: center;
-    /* Rata tengah horizontal */
+    /* Rata tengah */
     gap: 15px;
     /* Jarak antar badge */
+    flex-wrap: wrap;
+    /* Turun ke bawah jika tidak muat */
 }
 
-/* --- KONTAK CONTAINER --- */
-/* Menggunakan grid 2 kolom untuk layout kontak */
+/* ===== 5. LAYOUT KONTAK (FLEXBOX) ===== */
 .kontak-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    /* Flexbox */
+    justify-content: space-between;
+    /* Informasi di kiri, form di kanan */
+    gap: 50px;
+    /* Jarak antar kolom */
 }
 
-/* Form kontak dengan latar abu-abu terang */
+.kontak-info {
+    flex: 1;
+    /* Ambil 1 bagian */
+}
+
 .kontak-form {
-    background-color: #f5f5f5;
-    padding: 25px;
+    flex: 1;
+    /* Ambil 1 bagian (seimbang) */
+    background-color: #f8f9fa;
+    /* Latar abu-abu */
+    padding: 30px;
+    /* Jarak dalam */
     border-radius: 10px;
+    /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Bayangan */
 }
 
 /* ========================================
-   RESPONSIVE DESIGN (Media Queries)
+   RESPONSIVE DESIGN (MOBILE)
    ======================================== */
 
-/* --- Tablet & Laptop Kecil (max-width: 992px) --- */
-@media (max-width: 992px) {
+/* Layar dengan lebar maksimal 768px (HP/Tablet) */
+@media screen and (max-width: 768px) {
 
-    /* Hero menjadi column (turun) */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 100px 5% 30px;
-    }
-
-    /* Padding kanan dihilangkan karena teks di atas */
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-
-    /* Ukuran heading hero lebih kecil */
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    /* Gambar profil lebih kecil */
-    .box-gambar {
-        width: 200px;
-        height: 200px;
-    }
-
-    /* Padding section dikurangi */
-    .proyek-section,
-    .skills-section,
-    .kontak-section {
-        padding: 40px 5%;
-    }
-}
-
-/* --- Mobile (max-width: 768px) --- */
-@media (max-width: 768px) {
-
-    /* ====== NAVBAR RESPONSIF ====== */
+    /* Navbar lebih kecil */
     .navbar {
         padding: 15px 20px;
-        flex-wrap: wrap;
-        /* Memungkinkan wrap jika perlu */
+        /* Kurangi padding */
     }
 
-    /* Menampilkan hamburger di mobile */
-    .hamburger {
-        display: flex;
-        /* Tampilkan di mobile */
-        z-index: 1001;
-        /* Di atas menu */
-    }
-
-    /* Menu navigasi disembunyikan di mobile */
+    /* Sembunyikan menu di mobile (akan dibuat hamburger) */
     .nav-links {
         display: none;
-        /* Sembunyikan menu */
-        flex-direction: column;
-        /* Menu menjadi vertikal */
-        position: absolute;
-        top: 100%;
-        /* Muncul di bawah navbar */
-        left: 0;
-        width: 100%;
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        gap: 0;
-        text-align: center;
-        border-top: 1px solid #eee;
-        transition: all 0.3s ease;
     }
 
-    /* Menu muncul saat class 'active' ditambahkan */
-    .nav-links.active {
-        display: flex;
-        /* Tampilkan menu */
-        animation: slideDown 0.3s ease;
-        /* Animasi slide down */
-    }
-
-    /* Animasi slide down untuk menu */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Style setiap item menu di mobile */
-    .nav-links li {
-        margin: 0;
-        padding: 12px 0;
-        border-bottom: 1px solid #f0f0f0;
-        width: 100%;
-    }
-
-    /* Menghilangkan border pada item terakhir */
-    .nav-links li:last-child {
-        border-bottom: none;
-    }
-
-    .nav-links li a {
-        display: block;
-        font-size: 18px;
-        padding: 5px 0;
-    }
-
-    /* Menghilangkan underline effect di mobile */
-    .nav-links li a::after {
-        display: none;
-    }
-
-    .nav-links li a:hover {
-        background-color: #f8f9fa;
-        border-radius: 5px;
-    }
-
-    /* ====== HERO ====== */
+    /* Hero menjadi kolom (atas-bawah) */
     .hero {
-        padding: 120px 5% 20px;
-        min-height: auto;
-        /* Menghilangkan min-height agar tidak terlalu tinggi */
+        flex-direction: column;
+        /* Dari baris ke kolom */
+        text-align: center;
+        /* Teks rata tengah */
+        padding-top: 100px;
+        /* Kurangi padding atas */
+    }
+
+    .hero-content {
+        padding-right: 0;
+        /* Hilangkan padding kanan */
+        margin-bottom: 40px;
+        /* Jarak bawah */
     }
 
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 36px;
+        /* Ukuran font lebih kecil */
     }
 
-    /* ====== GRID ====== */
+    /* Grid dari 3 kolom jadi 1 kolom */
     .grid-karya {
         grid-template-columns: 1fr;
-        gap: 20px;
+        /* 1 kolom penuh */
     }
 
+    /* Kontak jadi kolom (atas-bawah) */
     .kontak-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        /* Dari baris ke kolom */
         gap: 30px;
-    }
-
-    /* ====== GAMBAR ====== */
-    .box-gambar {
-        width: 150px;
-        height: 150px;
-    }
-
-    /* ====== HEADING ====== */
-    h2 {
-        font-size: 26px;
-    }
-
-    /* ====== SECTION ====== */
-    .proyek-section,
-    .skills-section,
-    .kontak-section {
-        padding: 30px 5%;
-        min-height: auto;
-    }
-
-    /* ====== TOMBOL ====== */
-    .btn {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* ====== SKILLS ====== */
-    .skill-badge {
-        padding: 8px 16px;
-        font-size: 14px;
-        flex: 1 1 auto;
-    }
-}
-
-/* --- Mobile Kecil (max-width: 480px) --- */
-@media (max-width: 480px) {
-
-    /* Navbar lebih kompak */
-    .navbar {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .hamburger .bar {
-        width: 24px;
-        height: 2.5px;
-    }
-
-    /* Menu link lebih kecil */
-    .nav-links li a {
-        font-size: 16px;
-    }
-
-    /* Hero lebih kompak */
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-    }
-
-    /* Gambar profil lebih kecil */
-    .box-gambar {
-        width: 120px;
-        height: 120px;
-        border-width: 3px;
-    }
-
-    /* Card lebih kecil */
-    .card {
-        padding: 20px;
-    }
-
-    .card h3 {
-        font-size: 18px;
-    }
-
-    .card p {
-        font-size: 14px;
-    }
-
-    /* Form lebih kompak */
-    .input-field {
-        padding: 12px;
-        font-size: 14px;
+        /* Jarak antar elemen */
     }
 
     .kontak-form {
         padding: 20px;
-    }
-
-    h2 {
-        font-size: 22px;
-        margin-bottom: 25px;
+        /* Kurangi padding */
     }
 }
